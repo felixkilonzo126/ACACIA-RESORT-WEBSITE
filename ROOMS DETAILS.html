@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>ROOM DETAILS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+            background-image: url('resort\ background.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+        }
+            h1 {
+            background-color: blue;
+            color: yellow;
+            text-align: center;
+            padding: 10px;
+        }
+        h3 {
+            text-align: center;
+            background-color: blueviolet;
+            color: yellow;
+            padding: 10px;
+        }
+            .navbar {
+                background-color: brown;
+                padding: 15px;
+                text-align: center;
+            }
+            .navbar ul {
+                list-style: none;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+                padding: 0;
+            }
+            .navbar ul li {
+                display: inline;
+            }
+            .navbar ul li a {
+                color: yellow;
+                text-decoration: none;
+                padding: 10px;
+                font-size: 18px;
+            }
+            .navbar ul li a:hover {
+                background-color: blue;
+                color: red;
+                text-decoration: underline;
+                transition: 0.3s;
+            }
+            .flex-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+                padding: 20px;
+            }
+            .box {
+                width: 90%;
+                max-width: 400px;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+                text-align: center;
+            }
+            .left { background-color: blue; color: white; }
+            .center { background-color: brown; color: white; }
+            .right { background-color: blue; color: yellow; }
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+            }
+            button {
+                background-color: darkorange;
+                color: yellow;
+                padding: 10px;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+                margin-top: 10px;
+            }
+            button a {
+                color: yellow;
+                text-decoration: none;
+            }
+            button:hover {
+                background-color: blue;
+            }
+            footer {
+                background-color: blue;
+                color: yellow;
+                text-align: center;
+                padding: 10px;
+            }
+            @media (max-width: 768px) {
+                .flex-container {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .navbar ul {
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+        </style>
+    </head>
+        <body>
+            <h1>ACACIA RESORT BAR & RESTAURANT</h1>
+            <div class="navbar">
+            <ul>
+                <li><a href="HOME.html">HOME</a></li>
+                <li><a href="ABOUT US.HTML">ABOUT US</a></li>
+                <li><a href="OUR SERVICES.HTML">OUR SERVICES</a></li>
+                <li><a href="CONTACT US.HTML">CONTACT US</a></li>
+                <li><a href="#">ORDERS</a></li>
+            </ul>  
+            </div>
+            <div class="flex-container">
+                <div class="box left">
+                    <h3>ROOMS & ACCOMODATION</h3>
+                    <P>Experience comfort and luxury in our well-furnished rooms, equipedwith modern amenities to ensure a relaxing stay.</P>
+                    <table border="3">
+                        <tr><td>ROOM TYPE</td><td>COST OF THE ROOM</td></tr>
+                        <tr><td>SINGLE ROOM</td><td>2000 per night</td></tr>
+                        <tr><td>BEDSITTER ROOM</td><td>3000 per night</td></tr>
+                        <tr><td>ONE BEDROOM</td><td>4000 per night</td></tr>
+                        <tr><td>TWO BEDROOM</td><td>5000 per night</td></tr>
+                    </table> <br><br><br><br><br><br>
+                </div>
+                <div class="box center">
+                    <table border="3">
+                        <h3>ROOMS & ACCOMODATION</h3>
+                        <form id="bookingForm">
+                            <table border="1">
+                                <form action="#" method="post">
+                                <tr>
+                                    <td><strong>Name:</strong></td>
+                                    <td><input type="text" id="name" name="name"></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Phone Number:</strong></td>
+                                    <td><input type="number" id="phone" name="phone"></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Email:</strong></td>
+                                    <td><input type="email" id="email" name="email" required></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Room Type:</strong></td>
+                                    <td>
+                                        <select id="roomType" name="roomType">
+                                            <option value="">Choose Room</option>
+                                            <option value="single">Single Room</option>
+                                            <option value="bedsitter">Bedsitter</option>
+                                            <option value="one_bedroom">One Bedroom</option>
+                                            <option value="two_bedroom">Two Bedroom</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Contact Method:</strong></td>
+                                    <td>
+                                        <select id="contactMethod" name="contactMethod">
+                                            <option value="">Choose Contact Method</option>
+                                            <option value="phone">Phone Call</option>
+                                            <option value="email">Email</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                    
+                            <button type="submit">Book Now</button>
+                        </form>
+                        <script src="SCRIPTS.JS"></script>
+
+                </div>
+            </div>
+            <nav>
+                <footer>
+                   <p><marquee behavior="scroll" direction="left"><strong><em> WELCOME TO ACACIA RESORT BAR & RESTAURANT.WE ARE HERE TO SERVE YOU.REACH US VIA 0705800515 EMAIL US:acaciaresort123@gmail.com.WE ARE LOCATED A LONG NAIROBI-GARISA HIGHWAY 2KM FROM MATUU TOWN...</em></strong></marquee></p>
+                </footer>
+            </nav> 
+        </body>
+</html>
+    

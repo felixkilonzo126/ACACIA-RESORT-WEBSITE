@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>HALLS DETAILS.HTML</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+            background-image: url('resort\ background.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+        }
+            h1 {
+            background-color: blue;
+            color: yellow;
+            text-align: center;
+            padding: 10px;
+        }
+        h3 {
+            text-align: center;
+            background-color: blueviolet;
+            color: yellow;
+            padding: 10px;
+        }
+            .navbar {
+                background-color: brown;
+                padding: 15px;
+                text-align: center;
+            }
+            .navbar ul {
+                list-style: none;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+                padding: 0;
+            }
+            .navbar ul li {
+                display: inline;
+            }
+            .navbar ul li a {
+                color: yellow;
+                text-decoration: none;
+                padding: 10px;
+                font-size: 18px;
+            }
+            .navbar ul li a:hover {
+                background-color: blue;
+                color: red;
+                text-decoration: underline;
+                transition: 0.3s;
+            }
+            .flex-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+                padding: 20px;
+            }
+            .box {
+                width: 90%;
+                max-width: 400px;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+                text-align: center;
+            }
+            .left { background-color: blue; color: white; }
+            .center { background-color: brown; color: white; }
+            .right { background-color: blue; color: yellow; }
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+            }
+            button {
+                background-color: darkorange;
+                color: yellow;
+                padding: 10px;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+                margin-top: 10px;
+            }
+            button a {
+                color: yellow;
+                text-decoration: none;
+            }
+            button:hover {
+                background-color: blue;
+            }
+            footer {
+                background-color: blue;
+                color: yellow;
+                text-align: center;
+                padding: 10px;
+            }
+            @media (max-width: 768px) {
+                .flex-container {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .navbar ul {
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+        </style>
+    </head>
+<body>
+
+    <h1>ACACIA RESORT BAR & RESTAURANT</h1>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <ul>
+            <li><a href="HOME.html">HOME</a></li>
+            <li><a href="ABOUT US.HTML">ABOUT US</a></li>
+            <li><a href="OUR SERVICES.HTML">OUR SERVICES</a></li>
+            <li><a href="CONTACT US.HTML">CONTACT US</a></li>
+            <li><a href="#">ORDERS</a></li>
+        </ul>  
+    </div>
+
+    <!-- Content Section -->
+    <div class="flex-container">
+        <div class="box left">
+            <h3>HOTEL SERVICES</h3>
+            <p>Enjoy a fine dining experience with a variety of delicious meals prepared by top chefs.</p>
+            <table border="2">
+                <tr><th>TYPE OF MEAL</th><th>COST OF THE MEAL</th></tr>
+                <tr><td>BREAKFAST</td><td>200 per plate</td></tr>
+                <tr><td>LUNCH & DINNER</td><td>400 per plate</td></tr>
+                <tr><td>SNACK & LIGHT MEALS</td><td>250 Per packet</td></tr>
+                <tr><td>CAKE BAKING</td><td>1000 per kg</td></tr>
+                <tr><td>OUTSIDE CATERING</td><td>300 per plate</td></tr>
+            </table>
+        </div>
+
+        <div class="box center">
+            <h3>ORDER YOUR MEAL</h3>
+            <form id="orderForm">
+                <table border="2">
+                    <tr>
+                        <td><label for="name">Name:</label></td>
+                        <td><input type="text" id="name"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="phone">Phone Number:</label></td>
+                        <td><input type="text" id="phone"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email:</label></td>
+                        <td><input type="email" id="email"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="mealType">Meal Type:</label></td>
+                        <td>
+                            <select id="mealType">
+                                <option value="">Choose Meal</option>
+                                <option value="Breakfast">Breakfast</option>
+                                <option value="Lunch & Dinner">Lunch & Dinner</option>
+                                <option value="Snack & Light Meals">Snack & Light Meals</option>
+                                <option value="Cake Baking">Cake Baking</option>
+                                <option value="Outside Catering">Outside Catering</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="contactMethod">Contact Method:</label></td>
+                        <td>
+                            <select id="contactMethod">
+                                <option value="">Choose Contact Method</option>
+                                <option value="Phone">Phone</option>
+                                <option value="Email">Email</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <button type="submit">Order Now</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript for Form Validation -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("orderForm").addEventListener("submit", function (event) {
+                event.preventDefault(); // Stop form from submitting
+
+                // Get input values
+                let name = document.getElementById("name").value.trim();
+                let phone = document.getElementById("phone").value.trim();
+                let email = document.getElementById("email").value.trim();
+                let mealType = document.getElementById("mealType").value;
+                let contactMethod = document.getElementById("contactMethod").value;
+
+                // Validate input
+                if (name === "" || phone === "" || email === "" || mealType === "" || contactMethod === "") {
+                    alert("Please fill in all fields before placing an order.");
+                } else {
+                    alert("Order successfully placed!");
+                    this.reset(); // Clear form after submission
+                }
+            });
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <p><marquee behavior="scroll" direction="left"> WELCOME TO ACACIA RESORT BAR & RESTAURANT.WE ARE HERE TO SERVE YOU.REACH US VIA 0705800515 EMAIL US:acaciaresort123@gmail.com.WE ARE LOCATED A LONG NAIROBI-GARISA HIGHWAY 2KM FROM MATUU TOWN...</marquee></p>
+    </footer>
+
+</body>
+</html>
