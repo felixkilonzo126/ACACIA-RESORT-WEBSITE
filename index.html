@@ -1,0 +1,224 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HOME PAGE</title>
+    <style>     
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-image: url('resort\ backgound.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+        }
+        h1 {
+            background-color: blue;
+            color: yellow;
+            text-align: center;
+            padding: 10px;
+        }
+        h3 {
+            text-align: center;
+            background-color: blueviolet;
+            color: yellow;
+            padding: 10px;
+        }
+        
+        /* SLIDESHOW STYLING */
+        .slideshow-container {
+            max-width: 80%;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+            height: 300px;
+        }
+        .slide {
+            display: none;
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .fade {
+            animation: fadeEffect 5s infinite;
+        }
+        @keyframes fadeEffect {
+            0% { opacity: 0; }
+            25% { opacity: 1; }
+            75% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        
+        /* NAVBAR */
+        .navbar {
+            background-color: brown;
+            text-align: center;
+            padding: 10px;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 0;
+        }
+        .navbar ul li {
+            display: inline;
+        }
+        .navbar ul li a {
+            color: yellow;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 18px;
+        }
+        .navbar ul li a:hover {
+            background-color: blue;
+            color: red;
+            text-decoration: underline;
+            transition: 0.3s;
+        }
+
+        /* CONTENT SECTION */
+        .info-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .box {
+            width: 90%;
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .left { background-color: blue; color: white; }
+        .center { background-color: brown; color: white; }
+        .right { background-color: blue; color: white; }
+        ol {
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: blue;
+            color: yellow;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            .info-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            .navbar ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            .slideshow-container {
+                height: 200px;
+            }
+            .slide {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ACACIA RESORT BAR & RESTAURANT</h1>
+
+    <!-- Navigation Menu -->
+    <div class="navbar">
+        <ul>
+            <li><a href="HOME.html">HOME</a></li>
+            <li><a href="ABOUT US.HTML">ABOUT US</a></li>
+            <li><a href="OUR SERVICES.HTML">OUR SERVICES</a></li>
+            <li><a href="CONTACT US.HTML">CONTACT US</a></li>
+            <li><a href="#">ORDERS</a></li>
+        </ul>
+    </div>
+     <!-- Slideshow Container -->
+     <div class="slideshow-container">
+        <img class="slide fade" src="conferences hall.jpg" alt="">
+        <img class="slide fade" src="bedroom image.jpg" alt="Resort Image 2">
+        <img class="slide fade" src="restorant hotel.jpg" alt="Resort Image 3">
+    </div>
+
+    <!-- Content Section -->
+    <div class="info-section">
+        <div class="box left">
+            <h3>ABOUT US</h3>
+            <p>Welcome to Acacia Resort Bar & Restaurant, your perfect getaway for relaxation and luxury. 
+               Located in a serene environment, we offer world-class hospitality, breathtaking views, and exceptional service. 
+               Whether you're here for a vacation, a romantic getaway, or a business retreat, we ensure an unforgettable experience.<br><br>
+               WE ARE HERE BECAUSE OF YOU.</p>
+        </div>
+        <div class="box center">
+            <h3>OUR SERVICES</h3>
+            <p>Be part of our top-notch services, including:</p>
+            <ol>
+                <li>Luxury accommodation with scenic views.</li>
+                <li>Fine dining with local and international cuisines.</li>
+                <li>A fully stocked bar with signature cocktails.</li>
+                <li>Relaxing spa and wellness treatments.</li>
+                <li>Exciting outdoor activities and excursions.</li>
+            </ol>
+            <p>We currently have special offers – rush before they expire!</p>
+        </div>
+        <div class="box right">
+            <h3>OUR RATES</h3>
+            <p>Enjoy luxury at affordable prices! Our rates are designed to give you the best experience at great value:</p>
+            <ol>
+                <li>Standard Room: KSH 5,000 per night.</li>
+                <li>Deluxe Room: KSH 8,500 per night.</li>
+                <li>Executive Suite: KSH 10,000 per night.</li>
+                <li>Cottage (Family Package): KSH 15,000 per night.</li>
+                <li>Buffet Dining: KSH 1,500 per person.</li>
+                <li>Spa Packages: From KSH 3,000.</li>
+            </ol>
+            <p>Special discounts available for group bookings and extended stays.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p><marquee behavior="scroll" direction="left"><strong>WELCOME TO ACACIA RESORT BAR & RESTAURANT. WE ARE HERE TO SERVE YOU. 
+           CONTACT: 0705800515 | EMAIL: acaciaresort123@gmail.com | LOCATION: NAIROBI-GARISA HIGHWAY, 2KM FROM MATUU TOWN.</strong></marquee></p>
+    </footer>
+
+    <!-- JavaScript for Slideshow -->
+    <script>
+        let slideIndex = 0;
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";  
+            setTimeout(showSlides, 5000); 
+        }
+        showSlides();
+    </script>
+
+</body>
+</html>
+
